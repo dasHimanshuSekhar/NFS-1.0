@@ -15,13 +15,8 @@ It's Himanshu
 ---------------------------------------------------------------------xxxxxxxxxxxxxxxxxxxxxxxx-------------------------------------------------------------
 
 PREVIEW ::
-< intro >
-press 'enter' here to continue.
 ![Screenshot (32)](https://user-images.githubusercontent.com/61196311/131680754-8880afa1-d758-481a-9e35-7fc2c8413ec0.png)
 -------------------------------------------------------------------------------------------------------------------------
-< driving >
-press 's' here to start the car.
 ![Screenshot (33)](https://user-images.githubusercontent.com/61196311/131680987-920762f8-bdd0-411b-9e22-b881af81bc4a.png)
 -------------------------------------------------------------------------------------------------------------------------
-<>press 'a' to accelerate the car and go on !!
 ![Screenshot (34)](https://user-images.githubusercontent.com/61196311/131681018-3ee7b26b-08b7-429e-9647-b5eaf494cdbd.png)
