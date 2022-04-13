@@ -9,6 +9,8 @@ The condition is if you get collision then your car will be getting low... and s
 
 The menu is not there I'll be added later in the next version...  
 
+The traffic will be there and user have to move forward by trying not to strike with any vehicle or go outside of the road. The car game speed and health will be mentioned for the user. The health will be decreases as user strike at anywhere. User can see the score also as he moves forward and sustained in the game.
+
 Thank You!
 It's Himanshu
 
