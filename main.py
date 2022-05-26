@@ -31,9 +31,9 @@ crashCounter = 0
 levels = 1
 # ----------------------------------------SOUNDS--------------------------------------------------
 
-startEnginSound = pygame.mixer.Sound('carEngineStart.mp3')
-carAcceleratingSound = pygame.mixer.Sound('carAcceleratedEngine.mp3')
-carEngineLoopExtrem = pygame.mixer.Sound('carEngineLoopExtrem.mp3')
+# startEnginSound = pygame.mixer.Sound('carEngineStart.mp3')
+# carAcceleratingSound = pygame.mixer.Sound('carAcceleratedEngine.mp3')
+# carEngineLoopExtrem = pygame.mixer.Sound('carEngineLoopExtrem.mp3')
 # carEnginDecreaseAcceleration = pygame.mixer.Sound('carEnginDecreaseAcceleration.mp3')
 # carEngineDecreaseStopEngine = pygame.mixer.Sound('carEngineDecreaseStopEngine.mp3')
 # carStandEngineLoop = pygame.mixer.Sound('carStandEngineLoop.mp3')
@@ -46,7 +46,6 @@ car_speed_decreasing = False
 car_acceleration = 0
 car_accelerator_up = False
 car_accelerator_down = False
-carEnginOn = False
 hand_break = False
 car_speedometer = 0
 car_x_coordinate_list = [455, 585, 320, 200]
@@ -106,6 +105,7 @@ def choose_cars():
 # Score Updater
 score_value = 0
 font = pygame.font.Font('font.ttf', 32)
+
 def show_score():
     score = font.render("Score " + str(int(score_value)), True, (255, 255, 5))
     screen.blit(score, (880, 10))
@@ -145,24 +145,21 @@ while run_the_game:
         if event.type == pygame.QUIT:
             run_the_game = False
         elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_RIGHT and carEnginOn and car_acceleration > 1.5:
+            if event.key == pygame.K_RIGHT and car_acceleration > 1.5:
                 car_x_coordinate_update = 10 + (car_acceleration / 10)
-            elif event.key == pygame.K_LEFT and carEnginOn and car_acceleration > 1.5:
+            elif event.key == pygame.K_LEFT and car_acceleration > 1.5:
                 car_x_coordinate_update = -10 - (car_acceleration / 10)
-            elif event.key == pygame.K_a and carEnginOn:
+            elif event.key == pygame.K_a:
                 r_road_y_coordinate = 4
                 car_accelerator_down = True
                 car_accelerator_up = False
-            elif event.key == pygame.K_s and not(carEnginOn) and not(car_accelerator_down) and not(car_accelerator_up):
-                carEnginOn = True
-                # startEnginSound.play()
-            elif event.key == pygame.K_SPACE and carEnginOn:
+            elif event.key == pygame.K_SPACE:
                 hand_break = True
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
                 car_x_coordinate_update = 0
                 car_y_coordinate_update = 0
-            elif event.key == pygame.K_UP and carEnginOn:
+            elif event.key == pygame.K_UP:
                 pass
             elif event.key == pygame.K_s:
                 pass
@@ -171,18 +168,8 @@ while run_the_game:
                 car_accelerator_down = False
             elif event.key == pygame.K_SPACE:
                 hand_break = False
-    
-    # Play Track
-    if car_accelerator_down and car_speedometer < 30 and car_speedometer > 2:
-        carAcceleratingSound.play()
-        # startEnginSound.stop()
-    # if car_accelerator_down and car_speedometer > 25:
-    #     carEngineLoopExtrem.play()
-    #     carAcceleratingSound.stop()
 
-    
-    # if car_accelerator_down and car_speedometer >= 30
-
+                
     # Car Acceleration
     car_speedometer = int(car_acceleration)
     if car_accelerator_down:
@@ -228,12 +215,17 @@ while run_the_game:
         run_the_game = False
 
 # Game Over
+runTheGameMenu = True
 while runTheGameMenu:
     screen.blit(pygame.image.load('menu.png'), (0, 0))
     for event in pygame.event.get():
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_RETURN:
                 runTheGameMenu = False
-    game_over = font.render("!! GAME OVER !!", True, (74, 129, 132))
-    screen.blit(game_over, (683, 384))
+    font1 = pygame.font.Font('font1.ttf', 80)
+    game_over = font1.render("!! GAME OVER !!", True, (255, 14, 10))
+    font2 = pygame.font.Font('font2.ttf', 60)
+    game_score = font2.render("YOU SCORED :" + str(int(score_value)), True, (74, 129, 132))
+    screen.blit(game_over, (183, 184))
+    screen.blit(game_score, (383, 384))
     pygame.display.update()
