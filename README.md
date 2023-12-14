@@ -5,17 +5,27 @@ A Simple 2-D Car Game.
 
 **IMPORTANT INSTRUCTION:**
 **_System Requirements:_**
+
 _Latest Python interpreter should be installed on the system <Reference: https://www.python.org/downloads/>_
+
 _Varify installation after installation of 'Python' by running the command: [python -- version]_
+
 _Pygame Library must be installed as the game it self made using pygame library <Reference: https://www.geeksforgeeks.org/how-to-install-pygame-in-windows/>_
+
 _Varify installation after installation of 'PIP' by running the command: [pip -- version]_
+
 _Then go inside the directory where main.py present_
+
 _Run Command: python main.py [It'll automatically start the game]_
 
 **_Controllers_**
+
 _A: Accelerate_
+
 _SPACE BAR: Break_
+
 _Left Arrow: Left Turn_
+
 _Right Arrow: Right Turn_
 
 
