@@ -34,9 +34,6 @@ A Simple 2-D Car Game.
   _**Right Arrow**: Right Turn_
 
 
-Thank You!
-It's Himanshu
-
 
 PREVIEW::
 ![Screenshot (32)](https://user-images.githubusercontent.com/61196311/131680754-8880afa1-d758-481a-9e35-7fc2c8413ec0.png)
