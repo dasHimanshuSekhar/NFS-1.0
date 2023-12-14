@@ -6,8 +6,8 @@ A Simple 2-D Car Game.
 
 **IMPORTANT INSTRUCTION:**
 ==========================
-**_System Requirements:_**
---------------------------
+**_System Requirements && Initialization:_**
+--------------------------------------------
 
   _Latest Python interpreter should be installed on the system <Reference: https://www.python.org/downloads/>_
 
