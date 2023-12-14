@@ -223,8 +223,8 @@ while runTheGameMenu:
             if event.key == pygame.K_RETURN:
                 runTheGameMenu = False
     font1 = pygame.font.Font('font1.ttf', 80)
-    game_over = font1.render("!! GAME OVER !!", True, (255, 14, 10))
     font2 = pygame.font.Font('font2.ttf', 60)
+    game_over = font2.render("!! GAME OVER !!", True, (255, 14, 10))
     game_score = font2.render("YOU SCORED :" + str(int(score_value)), True, (74, 129, 132))
     screen.blit(game_over, (183, 184))
     screen.blit(game_score, (383, 384))
